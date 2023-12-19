@@ -47,3 +47,26 @@ int main(){
 
     
 }
+//WAP to insert an element to array//
+#include<stdio.h>
+int main(){
+    int arr[100],i,pos,n,e;
+    printf("enter the size of array:");
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        printf("enter the element %d",i+1);
+        scanf("%d",&arr[i]);
+    }
+    printf("enter the position u want to insert:");
+    scanf("%d",&pos);
+    printf("enter the element to insert in:");
+    scanf("%d",&e);
+    for(i=n-1;i<=pos-1;i--){
+        arr[i+1]=arr[i];
+    }
+    arr[pos]=e;
+    printf("after inserting the element the array :\n");
+    for (i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
+}
